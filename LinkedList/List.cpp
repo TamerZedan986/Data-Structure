@@ -104,3 +104,17 @@ void LinkedList::reverse(void)
         head=tail;
         tail=temp;
 }
+void LinkedList::left_rotate(void)
+{
+    Node*temp=head;
+    while (temp->next!=tail)
+    {
+        /* code */
+        temp=temp->next;
+    }
+    tail->next=head;
+    head=tail;
+    temp->next=nullptr;
+    tail=temp;
+    
+}
